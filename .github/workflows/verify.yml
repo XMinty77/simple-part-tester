@@ -1,0 +1,10 @@
+name: Verify
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y g++ ngspice gcc-avr avr-libc arduino-core-avr libsimavr-dev
+      - run: make test
+      - run: make simavr

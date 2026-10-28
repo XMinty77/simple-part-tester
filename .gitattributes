@@ -1,0 +1,2 @@
+# Preserve formatting in the upstream reference verbatim after transcoding.
+vendor/*.reference -whitespace
